@@ -43,7 +43,7 @@
 					}
 				}
 			],
-			"_postman_id": "923864b5-5145-4b90-9c2d-c21f63f4ed96",
+			"id": "923864b5-5145-4b90-9c2d-c21f63f4ed96",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -101,7 +101,7 @@
 					}
 				}
 			],
-			"_postman_id": "bd3e07fa-87bf-4bb6-a2c6-7452918611a3",
+			"id": "bd3e07fa-87bf-4bb6-a2c6-7452918611a3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -150,7 +150,7 @@
 					}
 				}
 			],
-			"_postman_id": "bde933a1-094f-4a28-abaf-b30b18c0badf",
+			"id": "bde933a1-094f-4a28-abaf-b30b18c0badf",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -172,8 +172,7 @@
 					"variable": [
 						{
 							"key": "bookId",
-							"value": "{{BookID}}",
-							"type": "string"
+							"value": "{{BookID}}"
 						}
 					]
 				}
@@ -204,7 +203,7 @@
 					}
 				}
 			],
-			"_postman_id": "0d6f6601-a2c9-462f-860e-16cf72bdbb1d",
+			"id": "0d6f6601-a2c9-462f-860e-16cf72bdbb1d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -255,7 +254,7 @@
 					}
 				}
 			],
-			"_postman_id": "654bcac8-880c-4f60-a814-5f247c9bf74e",
+			"id": "654bcac8-880c-4f60-a814-5f247c9bf74e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -283,8 +282,7 @@
 					"variable": [
 						{
 							"key": "orderId",
-							"value": "{{OrderID}}",
-							"type": "string"
+							"value": "{{OrderID}}"
 						}
 					]
 				}
@@ -311,7 +309,7 @@
 					}
 				}
 			],
-			"_postman_id": "ee19424f-7851-4c2b-bd92-34cea5c6aab9",
+			"id": "ee19424f-7851-4c2b-bd92-34cea5c6aab9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -356,13 +354,16 @@
 							"\r",
 							"pm.test(\"Check Customer\", ()=>{\r",
 							"    pm.expect(jsonData.customerName).to.eql(pm.environment.get(\"FName\"))\r",
-							"})"
+							"})\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
-			"_postman_id": "c6465483-8a25-41c6-91c8-9f79442be607",
+			"id": "c6465483-8a25-41c6-91c8-9f79442be607",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -390,8 +391,7 @@
 					"variable": [
 						{
 							"key": "orderId",
-							"value": "{{Delete_Order_ID}}",
-							"type": "string"
+							"value": "{{Delete_Order_ID}}"
 						}
 					]
 				}
@@ -401,10 +401,9 @@
 	],
 	"variable": [
 		{
-			"id": "15cf3413-6145-409f-9e02-9bfea805164a",
+			"id": "b7d3c5a9-034a-4e33-8e76-852846321a3b",
 			"key": "Token",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
