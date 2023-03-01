@@ -303,7 +303,11 @@
 							"\r",
 							"var jsonData = pm.response.json();\r",
 							"\r",
-							"pm.environment.set(\"Delete_Order_ID\", jsonData.orderId);"
+							"pm.environment.set(\"Delete_Order_ID\", jsonData.orderId);\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -401,7 +405,7 @@
 	],
 	"variable": [
 		{
-			"id": "b7d3c5a9-034a-4e33-8e76-852846321a3b",
+			"id": "38140814-a6fe-49f5-bc80-f3f637270e50",
 			"key": "Token",
 			"value": ""
 		}
